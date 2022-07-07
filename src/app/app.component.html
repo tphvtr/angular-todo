@@ -14,9 +14,9 @@
     <input type="text" placeholder="ToDo name" [formControl]="name" maxlength="50">
     <p style="margin: 0;" [style.color]="name.value?.length < 50 ? 'grey' : 'red'">{{ name.value?.length || 0 }} / 50</p>
   </div>
-  <button style="height: max-content;" (click)="addTodo(name.value)" [disabled]="name.invalid">Create</button>
+  <button class="button" (click)="addTodo(name.value)" [disabled]="name.invalid">Create</button>
 </div>
-<input type="text" placeholder="search" [formControl]="search">
+<input type="text" placeholder="search..." [formControl]="search">
 
 <article *ngFor="let todo of (todos$ | async); let i = index" class="todo-item">
   <span>{{ todo.name }}</span>
