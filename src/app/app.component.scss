@@ -50,5 +50,9 @@ input {
   &:hover {
     background-color: #ccc;
   }
+  &:disabled {
+    opacity: .5;
+    pointer-events: none;
+  }
 }
 
